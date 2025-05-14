@@ -1,11 +1,11 @@
 from MorseConstants import MORSE
-from ConsoleEmitter import ConsoleEmitter
+from PyLedEmitter import PyLedEmitter
 
 import sys
 
 
 input = sys.argv[1]
-emitter = ConsoleEmitter(1)
+emitter = PyLedEmitter(1)
 
 for char in input:
     for signal in MORSE[char.capitalize()]:

@@ -3,12 +3,15 @@ from PyLedEmitter import PyLedEmitter
 
 import sys
 
-
 input = sys.argv[1]
-emitter = PyLedEmitter(1)
+emitter = PyLedEmitter(0.3)
 
 for char in input:
+    print(char)
+
     for signal in MORSE[char.capitalize()]:
+        print(signal)
+
         match signal:
             case ".":
                 emitter.emitDot()
@@ -20,3 +23,11 @@ for char in input:
         emitter.pauseBetweenLetterPart()
 
     emitter.pauseBetweenLetter()
+
+
+
+
+
+
+
+
